@@ -19,12 +19,21 @@ The input of type file is hidden, but without using the hidden attribute as some
 
 The input of type text is used to display the file name. The file name is striped of its local path. You may click this input to open the browse file dialog.
 <h4>Markup Snippet</h4>
+
+Note: Don't forget to include the .js and .css files found in the 'src' folder of this repo.
 ```html
 <div class="input-group-file">
   <input type="text" class="form-control" readonly="">
   <label class="btn btn-primary" for="file1">Select File</label>
   <input type="file" id="file1" name="file_name1">
 </div>		
+```
+<h4>jQuery function call</h4>
+Simply call the following function at document ready.
+```javascript
+$(document).ready(function(){
+  input_group_file();
+});
 ```
 <h2>Compatible Browsers (tested)</h2>
 <ul>
