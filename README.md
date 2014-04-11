@@ -13,11 +13,12 @@ example.html can be tested as a standalone.
 
 <h2>Info</h2>
 
-In order to support IE8, this plugin uses the 'for' attribute of the 'label' tag. Make sure the 'for' attribute holds the same value as the 'id' of your input of type file. The label is used as a button in this plugin. This is why we assign it the followin classes: 'btn btn-primary'.
+In order to support IE8, this plugin uses the 'for' attribute of the 'label' tag. Make sure the 'for' attribute holds the same value as the 'id' of your input of type file. The label is used as the button. 
 
-The input of type file is hidden, but without using the hidden attribute as some browsers don't react well to it for this particular usage.
+The input of type 'file' is hidden, but without using the hidden attribute. Some browsers won't react correctly if the input of type 'file' is set to display:none (hidden).
 
-The input of type text is used to display the file name. The file name is striped of its local path. You may click this input to open the browse file dialog.
+The input of type 'text' is used to display the file name. The file name is striped of its local path. Clicking this input will also open the browse file dialog.
+
 <h4>Markup Snippet</h4>
 
 Note: Don't forget to include the .js and .css files found in the 'src' folder of this repo.
