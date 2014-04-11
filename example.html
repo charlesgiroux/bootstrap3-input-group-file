@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+        	<title>A neat little example</title>
+        	<meta charset="UTF-8">
+        	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  	
+	</head>
+	<body>
+		<script>
+			$(document).ready(function(){
+				$(":text").click(function(){
+					if($(this).siblings(":file").size() > 0){
+						$(this).siblings("label").click();
+					};
+				});
+				$(":file").change(function(){
+					$file_name = $(this).val().replace(/\\/g, '/').replace(/.*\//, '');;
+					$(this).siblings(":text").val($file_name);
+				});
+			});
+		</script>
+	
+		<style>
+			.input-group-file{
+				width:auto;
+			}
+		
+			.input-group-file input[type="text"]{
+				width:70%;
+				float:left;
+				padding-left:5px;
+				border-top-right-radius:0px;
+				border-bottom-right-radius:0px;
+				border-right:0px;
+				cursor:default !important;
+				background-color: white !important;
+			}
+			.input-group-file label{
+				width:30%;
+				float:left;
+				border-top-left-radius:0px;
+				border-bottom-left-radius:0px;
+			
+			}
+			.input-group-file input[type="file"]{
+				position: absolute !important; 
+				left: -9999px !important; 
+			}
+		
+		</style>
+		<div class="container-fluid">
+			<h1 align="center">A Simple Example</h1>
+			<div class="col-lg-4 col-lg-offset-4">
+				<div class="input-group-file">
+	            			<input type="text" class="form-control" readonly="">
+	                		<label class="btn btn-primary" for="file1">Select File</label>
+	                		<input type="file" name="file_name_1" id="file1">
+	            		</div>						
+			</div>
+			<br>
+			<br>
+			<div class="col-lg-6 col-lg-offset-3">
+				<div class="input-group-file">
+	            			<input type="text" class="form-control" readonly="">
+	        		 	<label class="btn btn-success" for="file2">Select File</label>
+	                		<input type="file" name="file_name2" id="file2">
+	        		 </div>						
+			</div>
+		</div>
+	</body>
+</html>             
