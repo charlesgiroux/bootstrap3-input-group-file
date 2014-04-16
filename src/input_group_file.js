@@ -5,7 +5,7 @@ function input_group_file(){
 		};
 	});
 	$(":file").change(function(){
-		$file_name = $(this).val().replace(/\\/g, '/').replace(/.*\//, '');;
+		$file_name = $(this).val().replace(/\\/g, "/").replace(/.*\//, "");;
 		$(this).siblings(":text").val($file_name);
 	});
 }
