@@ -22,3 +22,11 @@
 	position: absolute !important; 
 	left: -9999px !important; 
 }
+@media (max-width: 350px) {
+	.input-group-file input[type="text"] {
+		width:60%;
+	}
+	.input-group-file label{
+		width:40%;
+	}
+}
